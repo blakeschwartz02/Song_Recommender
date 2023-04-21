@@ -19,7 +19,7 @@ Run: vggish_feature_extraction/extract_features_from_gtzan.py
 To run the VGGish feature extraction on the metal dataset: 
 Run: vggish_feature_extraction/extract_features_from_metal.py
 ### Feature Analysis
-To analyze the features with PCA and T-SNE, run: PCA.ipynb
+To analyze the features with PCA and T-SNE, run: feature_analysis/PCA.ipynb
 ### Classification models
 The classification_models folder contains all necessary files for models run on the GTZAN and metal dataset. These files are GTZAN_features_supervised, librosa_metal_classification, and vggish_metal_classification.
 Also, to run some unsupervised clustering algorithms, the folder 'Test Code' has two unsupervised files. 
