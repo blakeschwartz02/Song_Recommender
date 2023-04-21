@@ -9,8 +9,8 @@ Metrics: There are multiple issues in defining an adequate metric in this proble
 <br><br>
 Audio: The audio used consisted of WAV files. The Waveform Audio File Format is an uncompressed format for storing audio bitstreams. As a result, the WAV format is considered “lossless” and provides high quality audio, but the files are also very large. Therefore, features must be extracted from the large files to make the data manageable.
 <br><br>
-## VGGish
-VGGish is a pretrained Convolutional Neural Network created by Google that we used as a method of feature extraction. For more information please see the README.md file located in the vggish_feature_extraction folder.
+VGGish: VGGish is a pretrained Convolutional Neural Network created by Google that we used as a method of feature extraction. For more information please see the README.md file located in the vggish_feature_extraction folder.
+<br>
 
 ## Instructions to use code
 ### Feature Extraction
