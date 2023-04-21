@@ -1,3 +1,7 @@
+'''
+preliminary k-mean clustering algorithm, only for initial testing.
+'''
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
