@@ -1,3 +1,8 @@
+'''
+python file to extract features using the librosa package.
+To use this file, just change the path to your Project path.
+The input to the extractor is the path of your audio file.
+'''
 import pandas as pd
 import os
 import librosa 
