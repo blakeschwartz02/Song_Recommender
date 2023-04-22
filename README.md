@@ -29,10 +29,7 @@ This folder contains two jupyter notebooks showing the results of PCA and T-sne 
 This folder contains python file with a methods for extracting features from audio using the librosa audio library. It also contains a jupyter notebook actually extracting the features.
 
 ### similarity_models folder
-This folder contains a file with methods that find the k most similar songs in general and within the song's genre.
-
-### Test Code folder
-This folder contains unsupervised methods for clustering an song similarity
+This folder contains a file with methods that find the k most similar songs in general and within the song's genre. It also contains some unsupervised methods for clustering.
 
 ### Vggish_imports
 This folder contains files for using the VGGish model and extracting features from audio files using it. Most of the files are from [Tensorflow's Vggish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). There are also some files we created for vggish feature extraction.
