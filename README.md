@@ -9,7 +9,7 @@ Metrics: There are multiple issues in defining an adequate metric in this proble
 <br><br>
 Audio: The audio used consisted of WAV files. The Waveform Audio File Format is an uncompressed format for storing audio bitstreams. As a result, the WAV format is considered “lossless” and provides high quality audio, but the files are also very large. Therefore, features must be extracted from the large files to make the data manageable.
 <br><br>
-VGGish: VGGish is a pretrained Convolutional Neural Network created by Google that we used as a method of feature extraction. For more information please see the README.md file located in the vggish_feature_extraction folder.
+VGGish: VGGish is a pretrained Convolutional Neural Network created by Google that we used as a method of feature extraction. For more information please see the README.md file located in the vggish_imports folder.
 <br>
 
 ## What is in this repository?
@@ -48,7 +48,7 @@ Run: vggish_feature_extraction/extract_features_from_metal.py
 To analyze the features with PCA and T-SNE, run: feature_analysis/PCA.ipynb
 ### Classification models
 The classification_models folder contains all necessary files for models run on the GTZAN and metal dataset. These files are GTZAN_features_supervised, librosa_metal_classification, and vggish_metal_classification.
-Also, to run some unsupervised clustering algorithms, the folder 'Test Code' has two unsupervised files. 
+Also, to run some unsupervised clustering algorithms, the folder 'similarity_models' has two unsupervised files. 
 Run k_means_clustering.py and GTZAN_features_unsupervised.ipynb for k-means clustering algorithms and further PCA analysis.
 ### Downloading a Metal Dataset
 First, install youtube-dl. 
