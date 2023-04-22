@@ -12,6 +12,32 @@ Audio: The audio used consisted of WAV files. The Waveform Audio File Format is 
 VGGish: VGGish is a pretrained Convolutional Neural Network created by Google that we used as a method of feature extraction. For more information please see the README.md file located in the vggish_feature_extraction folder.
 <br>
 
+## What is in this repository?
+
+### classification models folder
+This folder contains all the classification some of the models we used. We only included the models that gave use the best results, the rest we did not include.
+
+### Data folder
+This folder contains all the data from datasets that we used to train our models. mainly it contains the GTZAN datset as we 
+did not want to upload the rest if the data since it was alot of data. There is also python file (Audio_downloader.py) with some methods to download
+audios from youtube.
+
+### feature analysis folder
+This folder contains two jupyter notebooks showing the results of PCA and T-sne analysis on both the extracyed features from the vggish model and audio features.
+
+### librosa_feature_extraction
+This folder contains python file with a methods for extracting features from audio using the librosa audio library. It also contains a jupyter notebook actually extracting the features.
+
+### similarity_models folder
+This folder contains a file with methods that find the k most similar songs in general and within the song's genre.
+
+### Test Code folder
+This folder contains unsupervised methods for clustering an song similarity
+
+### Vggish_imports
+This folder contains files for using the VGGish model and extracting features from audio files using it. Most of the files are from [Tensorflow's Vggish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). There are also some files we created for vggish feature extraction.
+
+
 ## Instructions to use code
 ### Feature Extraction
 To run the librosa feature extraction on the GTZAN/metal dataset:
@@ -20,6 +46,7 @@ To run the VGGish feature extraction on the GTZAN dataset:
 Run: vggish_feature_extraction/extract_features_from_gtzan.py
 To run the VGGish feature extraction on the metal dataset: 
 Run: vggish_feature_extraction/extract_features_from_metal.py
+
 ### Feature Analysis
 To analyze the features with PCA and T-SNE, run: feature_analysis/PCA.ipynb
 ### Classification models

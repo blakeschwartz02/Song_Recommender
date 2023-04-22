@@ -1,3 +1,9 @@
+'''
+This file contains methods helpful for extracting 
+features from audio files using the VGGish model.
+'''
+
+
 from __future__ import print_function
 
 import numpy as np
@@ -21,6 +27,18 @@ checkpoint_path = 'vggish_imports/vggish_model.ckpt'
 pca_params_path = 'vggish_imports/vggish_pca_params.npz'
 
 def extract_features_from_wav_file(audio_path, postprocess=True, shorten=True):
+    '''
+    This method extracts features from a given audio file using the VGGish model.
+
+    Parameters:
+        audio_path (str): Path to the audio file
+        postprocess (bool): Whether to postprocess the features or not
+        shorten (bool): Whether to shorten the audio file to 30 seconds or not (not applicable if audio is already 30 seconds)
+
+    Returns:
+        embedding_batch (numpy.ndarray): Array of features extracted from the audio file
+    '''
+    
     # Create input batch for Vggish model from audio file
     input_batch = None
     if shorten:

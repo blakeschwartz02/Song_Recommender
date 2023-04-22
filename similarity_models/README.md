@@ -1,12 +1,5 @@
 # Song Similarity Finder Based on Extracted Features Using Vggish Pre-trained Model
 
-## What is Vggish?
-This model uses a pre-trained deep neural network model called Vggish. This model was developed by researchers at Google for processing and extracting data from audios. This model uses multiple convolutional and max-pooling layers and was trained on an earlier version large dataset of audio recordings from Youtube, which later came to be known as [Youtube-8M](https://research.google.com/youtube8m/). It takes in audio samples and outputs a 128 dimension embedding vector for every second of the audio.
-
-## How did we use Vggish?
-
-We used Vggish to extract 3840 features from each song in the [GTZAN dataset](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) (128 features for each second of a song). We then stored those features in a csv file (vggish_features). We additionally use it to extract the features from any audio and use thos features to compare the audio with the audios from the GTZAN dataset and determine its similarity with other songs in the dataset.
-
 ## Similarity Score Model
 
 This model extracts the features of a given audio using the Vggish model and determines how similar that audio is to every other audio in the GTZAN dataset by using a particular similarity score. It then prints the top k similar songs to the given audio.

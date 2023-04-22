@@ -1,11 +1,6 @@
 '''
 This file contains methods for finding top k 
 most acoustically similar songs for a given song.
-
-Similarity scores:
-    - cosine similarity
-    - euclidean distance
-    - manhattan distance
 '''
 
 # standard imports
@@ -23,9 +18,10 @@ from sklearn.model_selection import train_test_split
 
 # vggish imports
 sys.path.append(os.getcwd() + '/vggish_imports')
-import vggish_imports.vggish_feature_extractor as extractor
+import vggish_feature_extractor as extractor
 sys.path.append(os.getcwd() + '/classification_models')
-import classification_models.vggish_genre_classifier as classifier
+import vggish_genre_classifier as classifier
+
 
 NUM_ARGS = 3
 TOTAL_NUM_SONGS = 100*10
