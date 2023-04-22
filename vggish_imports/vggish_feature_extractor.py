@@ -5,20 +5,32 @@ import tensorflow.compat.v1 as tf
 
 import os
 import sys
-sys.path.append(os.getcwd() + '/imports')
+sys.path.append(os.getcwd() + '/vggish_imports')
 
 import vggish_input
 import vggish_params
 import vggish_postprocess
 import vggish_slim
 
-# Paths to downloaded VGGish files.
-checkpoint_path = 'imports/vggish_model.ckpt'
-pca_params_path = 'imports/vggish_pca_params.npz'
+import librosa
 
-def extract_features_from_wav_file(audio_path, postprocess=True):
+
+
+# Paths to downloaded VGGish files.
+checkpoint_path = 'vggish_imports/vggish_model.ckpt'
+pca_params_path = 'vggish_imports/vggish_pca_params.npz'
+
+def extract_features_from_wav_file(audio_path, postprocess=True, shorten=True):
     # Create input batch for Vggish model from audio file
-    input_batch = vggish_input.wavfile_to_examples(audio_path)
+    input_batch = None
+    if shorten:
+        waveform, sr = librosa.load(audio_path, duration=30, sr=vggish_params.SAMPLE_RATE)
+        input_batch = vggish_input.waveform_to_examples(waveform, sr)
+
+    else:
+        input_batch = vggish_input.wavfile_to_examples(audio_path)
+
+    print(input_batch.shape)
 
     with tf.Graph().as_default(), tf.Session() as sess:
         vggish_slim.define_vggish_slim()                                # define the vggish model
