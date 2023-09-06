@@ -18,8 +18,8 @@ VGGish: VGGish is a pretrained Convolutional Neural Network created by Google th
 This folder contains all the classification some of the models we used. We only included the models that gave use the best results, the rest we did not include.
 
 ### Data folder
-This folder contains all the data from datasets that we used to train our models. mainly it contains the GTZAN datset as we 
-did not want to upload the rest if the data since it was alot of data. There is also python file (Audio_downloader.py) with some methods to download
+This folder contains all the data from datasets that we used to train our models. Mainly, it contains the GTZAN datset, as we 
+did not want to upload the rest if the data since it was over 100 GB. There is also python file (Audio_downloader.py) with some methods to download
 audios from youtube.
 
 ### feature analysis folder
